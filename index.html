@@ -8,16 +8,97 @@
       name="description"
       content="Indici algoritmici publici, rebalansati lunar, cu metodologia si ponderile modelului la vedere. Instrument automat, nu recomandare de investitii."
     />
-    <meta name="color-scheme" content="light dark" />
+    <!--
+      Site-ul este doar pe tema deschisa. Cu `light dark`, un sistem cu tema
+      inchisa primeste de la browser un canvas negru pina ajunge CSS-ul, adica
+      exact flash-ul negru de la incarcare.
+    -->
+    <meta name="color-scheme" content="light" />
     <link rel="icon" href="/brand/mark.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/brand/logo.png" />
-    <meta name="theme-color" content="#181009" />
-    <script type="module" crossorigin src="/assets/index-C6iTDUji.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-D3D8HmvV.css">
+    <meta name="theme-color" content="hsl(47 88% 89%)" />
+    <style>
+      /*
+        Stil critic, inline: primul paint este alb, cu sigla pe ecran, inainte ca
+        bundle-ul sa ajunga. Fara el, intre HTML si CSS se vede albul gol.
+      */
+      html {
+        background: #fff;
+        color-scheme: light;
+      }
+      body {
+        margin: 0;
+      }
+      .boot {
+        position: fixed;
+        inset: 0;
+        z-index: 50;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.1rem;
+        background: #fff;
+        transition: opacity 320ms ease;
+      }
+      .boot-out {
+        opacity: 0;
+        pointer-events: none;
+      }
+      .boot img {
+        width: 84px;
+        height: 84px;
+        object-fit: contain;
+        animation: boot-pulse 1.5s ease-in-out infinite;
+      }
+      .boot p {
+        margin: 0;
+        font: 700 10px/1 ui-sans-serif, system-ui, sans-serif;
+        letter-spacing: 0.26em;
+        text-transform: uppercase;
+        color: hsl(17 75% 9% / 0.55);
+      }
+      @keyframes boot-pulse {
+        0%,
+        100% {
+          opacity: 0.5;
+          transform: scale(0.96);
+        }
+        50% {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .boot {
+          transition: none;
+        }
+        .boot img {
+          animation: none;
+          opacity: 0.75;
+        }
+      }
+    </style>
+    <script type="module" crossorigin src="/assets/index-DG0Q5Nfk.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DlzIqMt4.css">
   </head>
   <body>
     <div id="root"></div>
+    <!--
+      Ecranul de incarcare: strat alb cu sigla, scos cu o tranziție lina din
+      `main.tsx` dupa primul render al aplicatiei.
+    -->
+    <div id="boot" class="boot">
+      <img src="/brand/logo.png" alt="YEBICHU" width="84" height="84" />
+      <p>index.yebichu.com</p>
+    </div>
     <noscript>
+      <style>
+        /* fara JavaScript, ecranul de incarcare ar acoperi mesajul de mai jos */
+        #boot {
+          display: none;
+        }
+      </style>
       <div style="padding: 2rem; font-family: system-ui">
         <h1>index.yebichu.com</h1>
         <p>
