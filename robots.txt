@@ -1,0 +1,7 @@
+# index.yebichu.com — indici algoritmici publici
+# Toate paginile sunt publice; nu există zone private de ascuns.
+User-agent: *
+Allow: /
+
+# Sitemap-ul e servit de domeniul canonic (vezi CNAME).
+Sitemap: https://index.yebichu.com/sitemap.xml

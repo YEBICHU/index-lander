@@ -6,7 +6,7 @@
     <title>index.yebichu.com — indici algoritmici</title>
     <meta
       name="description"
-      content="Indici algoritmici publici, rebalansati lunar, cu metodologia si ponderile modelului la vedere. Instrument automat, nu recomandare de investitii."
+      content="Indici algoritmici publici, rebalansați lunar, cu metodologia și ponderile modelului la vedere. Instrument automat, nu recomandare de investiții."
     />
     <!--
       Site-ul este doar pe tema deschisa. Cu `light dark`, un sistem cu tema
@@ -14,9 +14,86 @@
       exact flash-ul negru de la incarcare.
     -->
     <meta name="color-scheme" content="light" />
-    <link rel="icon" href="/brand/mark.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="/brand/logo.png" />
-    <meta name="theme-color" content="hsl(47 88% 89%)" />
+    <meta name="theme-color" content="#FCF0CC" />
+    <meta name="author" content="YEBICHU" />
+    <!--
+      Un singur document serveste ambele limbi (rutele traiesc in fragment),
+      deci meta-urile statice sunt in româna, limba implicita; la schimbarea
+      limbii, `src/app/header.tsx` rescrie in DOM `<html lang>`, titlul,
+      descrierea si `og:*`/`twitter:*`. Crawler-ele care nu ruleaza JS vad
+      varianta româneasca, declarata si prin `og:locale:alternate`.
+    -->
+    <link rel="canonical" href="https://index.yebichu.com/" />
+    <link rel="alternate" hreflang="ro" href="https://index.yebichu.com/" />
+    <link rel="alternate" hreflang="en" href="https://index.yebichu.com/" />
+    <link rel="alternate" hreflang="x-default" href="https://index.yebichu.com/" />
+    <!--
+      Iconurile si manifestul folosesc cai RELATIVE: acelasi build merge pe
+      domeniu (`index.yebichu.com`) si pe subcale (`/index-lander/`).
+    -->
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png" />
+    <link rel="icon" type="image/svg+xml" href="brand/mark.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <!--
+      OG/Twitter cer adrese ABSOLUTE, deci folosim domeniul canonic (CNAME).
+      Imaginea are exact 1200x630 si este generata la build din artefactul
+      publicat (`tools/build-web-assets.mjs`).
+    -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="YEBICHU" />
+    <meta property="og:title" content="index.yebichu.com — indici algoritmici publici" />
+    <meta
+      property="og:description"
+      content="Indici algoritmici publici, rebalansați lunar, cu metodologia și ponderile modelului la vedere. Instrument automat, nu recomandare de investiții."
+    />
+    <meta property="og:url" content="https://index.yebichu.com/" />
+    <meta property="og:image" content="https://index.yebichu.com/og.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="YEBICHU Romania — indice algoritmic pe 20 de acțiuni BVB: randament anual compus, drawdown maxim și lunile urmărite."
+    />
+    <meta property="og:locale" content="ro_RO" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="index.yebichu.com — indici algoritmici publici" />
+    <meta
+      name="twitter:description"
+      content="Indici algoritmici publici, rebalansați lunar, cu metodologia și ponderile modelului la vedere."
+    />
+    <meta name="twitter:image" content="https://index.yebichu.com/og.png" />
+    <meta name="twitter:image:alt" content="YEBICHU Romania — indice algoritmic pe 20 de acțiuni BVB." />
+    <!-- Date structurate: organizatia si site-ul. Fara evaluari si fara preturi. -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://index.yebichu.com/#organization",
+            "name": "YEBICHU",
+            "url": "https://index.yebichu.com/",
+            "logo": { "@type": "ImageObject", "url": "https://index.yebichu.com/brand/logo.png" },
+            "sameAs": ["https://github.com/YEBICHU/index-lander"]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://index.yebichu.com/#website",
+            "name": "index.yebichu.com",
+            "alternateName": "YEBICHU",
+            "url": "https://index.yebichu.com/",
+            "inLanguage": ["ro", "en"],
+            "description": "Indici algoritmici publici, rebalansați lunar, cu metodologia și ponderile modelului la vedere.",
+            "publisher": { "@id": "https://index.yebichu.com/#organization" }
+          }
+        ]
+      }
+    </script>
     <style>
       /*
         Stil critic, inline: primul paint este alb, cu sigla pe ecran, inainte ca
@@ -79,8 +156,8 @@
         }
       }
     </style>
-    <script type="module" crossorigin src="/assets/index-K-gbroGF.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-BRZNqhZn.css">
+    <script type="module" crossorigin src="/assets/index-DvzuNb2C.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-D1gqwpbE.css">
   </head>
   <body>
     <div id="root"></div>

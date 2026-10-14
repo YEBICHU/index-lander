@@ -1,0 +1,35 @@
+{
+  "name": "index.yebichu.com — indici algoritmici publici",
+  "short_name": "YEBICHU",
+  "description": "Indici algoritmici publici, rebalansați lunar, cu metodologia și ponderile modelului la vedere.",
+  "lang": "ro",
+  "dir": "ltr",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "background_color": "#FCF0CC",
+  "theme_color": "#FCF0CC",
+  "icons": [
+    {
+      "src": "favicon-16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon-32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "brand/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
