@@ -1,10 +1,10 @@
 # index-lander
 
-Build static publicat pentru **<https://index.yebichu.com>** (intre timp, pe subcalea
+Build static publicat pentru **<https://index.yebichu.com>** (între timp, pe subcalea
 GitHub Pages: <https://yebichu.github.io/index-lander/>).
 
 > **Nu edita fisierele din acest depozit.** Tot arborele este generat de
-> `pnpm release` din depozitul privat `bvb-onnx` si apoi copiat aici; orice
+> `pnpm release` din depozitul privat `bvb-onnx` și apoi copiat aici; orice
 > modificare facuta direct este stearsa la urmatorul build.
 
 ## Ce contine
@@ -13,21 +13,21 @@ GitHub Pages: <https://yebichu.github.io/index-lander/>).
 | --- | --- |
 | `index.html` | raportul (SPA Vite/React), cu datele pipeline-ului importate la build |
 | `assets/` | JS + CSS, cu nume hash (cache imutabil) |
-| `brand/`, `fonts/` | ilustratiile de brand si fonturile self-hosted |
+| `brand/`, `fonts/` | ilustratiile de brand și fonturile self-hosted |
 
 ## De ce merge de oriunde
 
-Rutele traiesc in **hash** (`#/ro/romania/weights?v=prudent`), deci singura cale
+Rutele traiesc în **hash** (`#/ro/romania/weights?v=prudent`), deci singura cale
 reala este rădăcina site-ului:
 
 * același artefact functioneaza pe domeniu, pe subcalea unei pagini de proiect
-  GitHub Pages sau local, fara rescrieri pe server;
-* resursele sint scrise relativ (`./assets/...`, `../fonts/...`);
+  GitHub Pages sau local, fără rescrieri pe server;
+* resursele sunt scrise relativ (`./assets/...`, `../fonts/...`);
 * nu e nevoie de `404.html`: orice adresa ceruta serverului este un fisier real.
 
 ## Publicare
 
-Fluxul ruleaza din depozitul privat:
+Fluxul rulează din depozitul privat:
 
 ```bash
 pnpm release            # build in release-dist/
