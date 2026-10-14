@@ -64,7 +64,6 @@ Sumar: fiecare acțiune intră în model cu randamentul pe 1, 3, 6 și 12 luni, 
 
 * Site: <https://index.yebichu.com>
 * Oglindă GitHub Pages: <https://yebichu.github.io/index-lander/>
-* Contact: <mihailnica10@gmail.com>
 
 ## Precizări
 
